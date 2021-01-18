@@ -2,4 +2,8 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('成功！')
+    return render(request,'index.html')
+
+def upload(request):
+    upfile=request.FILES['upfile']
+    return HttpResponse('アップロード成功！')
